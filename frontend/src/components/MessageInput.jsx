@@ -87,16 +87,18 @@ function MessageInput() {
           />
           <button
             type="button"
-            className={`hidden sm:flex btn btn-circle 
+            className={`hidden sm:flex btn btn-circle tooltip tooltip-up
                 ${imgPreview ? "text-emerald-500" : "text-zinc-400"}`}
             onClick={() => fileInputRef.current?.click()}
+            data-tip="image"
           >
             <Image size={20} />
           </button>
         </div>
         <button
           type="submit"
-          className="btn btn-sm btn-circle"
+          className="btn flex hover:btn-primary btn-circle tooltip tooltip-up"
+          data-tip="send"
           disabled={!text.trim() && !imgPreview}
         >
           <Send size={22} />
